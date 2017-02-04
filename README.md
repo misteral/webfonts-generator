@@ -164,6 +164,7 @@ Template receives options from `options.templateOptions` along with the followin
 * styles `string` &ndash; Styles generated with default CSS template.
 	(`cssFontsPath` is chaged to relative path from `htmlDest` to `dest`)
 * names `array.<string>` &ndash; Names of icons.
+* namesandcodes `array.object<name:code>` &ndash; Names and icon unicode string
 
 ### templateOptions
 
