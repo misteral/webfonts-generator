@@ -30,12 +30,12 @@
 </head>
 <body>
 	<h1>{{fontName}}</h1>
-	{{#each names}}
+	{{#each namesandcodes}}
 	<div class="preview">
 		<span class="preview__icon">
-			<span class="{{../baseClass}} {{../classPrefix}}{{this}}"></span>
+			<span class="{{../baseClass}} {{../classPrefix}}{{name}}"></span>
 		</span>
-		<span>{{this}}</span>
+		<span>{{name}}: {{{code}}}</span>
 	</div>
 	{{/each}}
 </body>

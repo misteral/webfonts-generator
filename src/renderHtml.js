@@ -15,10 +15,20 @@ var renderHtml = function(options) {
 	var styles = renderCss(_.extend({}, options, {
 		cssFontPath: htmlFontsPath
 	}))
+  // Transform codepoints to hex strings
+  var codepoints = _.object(_.map(options.codepoints, function(codepoint, name) {
+    return [name, codepoint.toString(16)]
+  }))
+
+  var codes = [];
+  _.forEach(codepoints, function(e, k) {
+    codes.push({name:k, code: '\\' + e});
+  });
 
 	var ctx = _.extend({
 		names: options.names,
 		fontName: options.fontName,
+    namesandcodes: codes,
 		styles: styles
 	}, options.templateOptions)
 	return template(ctx)
