@@ -21,8 +21,10 @@ var renderHtml = function(options) {
   }))
 
   var codes = [];
+  var i = 0
   _.forEach(codepoints, function(e, k) {
-    codes.push({name:k, code: '\\' + e});
+    i += 1
+    codes.push({name:k, code: '\\' + e, index: i});
   });
 
 	var ctx = _.extend({
