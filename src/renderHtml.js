@@ -24,7 +24,7 @@ var renderHtml = function(options) {
   var i = 0
   _.forEach(codepoints, function(e, k) {
     i += 1
-    codes.push({name:k, code: '\\' + e, index: i});
+    codes.push({name:k, code: '\\u{' + e + '}', index: i});
   });
 
 	var ctx = _.extend({
